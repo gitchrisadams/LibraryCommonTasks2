@@ -1,0 +1,16 @@
+#map { height : 750px; }
+
+.legend{
+    padding: 5px;
+    background: white;
+    line-height:1.5em;
+}
+
+.legend i{
+    width: 5em;
+    float:left;
+}
+
+h1{
+    color:red;
+}

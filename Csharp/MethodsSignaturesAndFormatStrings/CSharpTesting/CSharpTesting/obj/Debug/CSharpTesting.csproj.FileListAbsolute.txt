@@ -1,0 +1,8 @@
+E:\Web-Dev\CSharpTesting\CSharpTesting\bin\Debug\CSharpTesting.exe.config
+E:\Web-Dev\CSharpTesting\CSharpTesting\bin\Debug\CSharpTesting.exe
+E:\Web-Dev\CSharpTesting\CSharpTesting\bin\Debug\CSharpTesting.pdb
+E:\Web-Dev\CSharpTesting\CSharpTesting\obj\Debug\CSharpTesting.exe
+E:\Web-Dev\CSharpTesting\CSharpTesting\obj\Debug\CSharpTesting.pdb
+E:\Web-Dev\CSharpTesting\CSharpTesting\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Web-Dev\CSharpTesting\CSharpTesting\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\Web-Dev\CSharpTesting\CSharpTesting\obj\Debug\CSharpTesting.csprojResolveAssemblyReference.cache

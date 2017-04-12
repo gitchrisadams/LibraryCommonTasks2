@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Leaflet Map Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ChristopherAdams.com - Web Developer">
+    <meta name="ChristopherAdams.com" content="ChristopherAdams.com main site">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+
+    <!-- For leaflet map library -->
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="data/countries.geojson"></script>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
+    <script src="lib/leaflet-bing-layer.js"></script>
+
+    <!-- MapBox(works w/ Leaflet) -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body>
+    <!-- Leaflets Map will display here -->
+    <h1>Population Map</h1>
+    <div id="map"></div>
+    
+    <!-- Display the map -->
+    <script src="showmap.js"></script>
+
+</body>
+</html>

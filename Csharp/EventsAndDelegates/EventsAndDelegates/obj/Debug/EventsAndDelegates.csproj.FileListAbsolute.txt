@@ -1,0 +1,6 @@
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\bin\Debug\EventsAndDelegates.exe.config
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\bin\Debug\EventsAndDelegates.exe
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\bin\Debug\EventsAndDelegates.pdb
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\obj\Debug\EventsAndDelegates.csprojResolveAssemblyReference.cache
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\obj\Debug\EventsAndDelegates.exe
+E:\Web-Dev\EventsAndDelegates\EventsAndDelegates\obj\Debug\EventsAndDelegates.pdb

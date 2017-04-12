@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+    <script src="./js/external/jquery-3.2.0.min.js"></script>
+    <script src="./js/external/underscore-min.js"></script>
+    <script src="./js/external/backbone-min.js"></script>
+    
+    <div id="todo">
+        <h2>Todos</h2>
+            <div id="todo"></div>
+    </div>
+
+    <script>
+        // BackboneJS Model:
+        var Todo = Backbone.Model.extend({
+            // Set the default values:
+            defaults: {
+                task: 'Cook Supper',
+                done: true
+            }
+        });
+
+        // Create a new instance of the Backbone Model:
+        var my_todo = new Todo();
+
+        // BackboneJS View:
+        // Create a BackboneJS TodoView to Render the View:
+        var TodoView = Backbone.View.extend({
+            // Constructor:
+            initialize: function(){
+                // Render the TodoView:
+                this.render();
+                console.log('Creating an instance of the view');
+            },
+
+            // template for displaying the view:
+            template: _.template('<%= task %> | <%= done %>'),
+
+            // Render the view:
+            // this.model.get('task') puts the model into the view.
+            // this.model.get('done') displays the true/false value from model.
+            render: function(){
+
+            // Way to display task and done without using a template:
+            //this.$el.html(this.model.get('task') + ' | ' + this.model.get('done'));
+
+            // Display task and done using a template:
+            this.$el.html(this.template(this.model.toJSON()));
+            return this;
+            }
+        });
+
+        // Create a new TodoView() Object:
+        var todoView = new TodoView({model: my_todo});
+
+        // Use JQuery to target the #todo div and append the todo item:
+        $('#todo').append(todoView.el);
+
+    </script>
+</body>
+</html>

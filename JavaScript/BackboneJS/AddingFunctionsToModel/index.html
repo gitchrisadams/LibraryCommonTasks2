@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+    <script src="./js/external/jquery-3.2.0.min.js"></script>
+    <script src="./js/external/underscore-min.js"></script>
+    <script src="./js/external/backbone-min.js"></script>
+    
+    <div id="todo">
+        <h2>Todos</h2>
+            <div id="task"></div>
+            <div id="task2"></div>
+            <div id="task3"></div>
+    </div>
+
+    <script>
+    
+    /********* Backbone Model *******/
+    Book = Backbone.Model.extend({
+        // Constructor:
+        initialize: function(){
+        }, 
+
+        // Default values:
+        defaults:{
+            name: 'Book Title',
+            author: 'No one'
+        },
+
+        // This method is available to an object when it is created
+        // so that it can print out the book details to console.
+        printDetails: function(){
+            console.log(this.get('name') + ' by ' + this.get('author'));
+        }
+    });
+
+    // Create new Book object w/ default values:
+    var myBook = new Book();
+
+    // Create new Book object passing in new values:
+    var myBook2 = new Book({
+        name: 'My fancy book',
+        author: 'Christopher Adams'
+    });
+
+    // Use printDetails method to display details for a book:
+    myBook.printDetails();
+    myBook2.printDetails();
+
+    /****** Output to Browser *******/
+    // JQuery to output:
+    $("#task").append(myBook.get('name') + ' | by: ' + myBook.get('author'));
+    $("#task2").append(myBook2.get('name') + ' | by: ' + myBook2.get('author'));
+
+
+    </script>
+</body>
+</html>

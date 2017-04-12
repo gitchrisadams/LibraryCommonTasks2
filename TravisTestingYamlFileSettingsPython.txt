@@ -1,0 +1,19 @@
+# Rename this filename .travis.yml
+
+language: python
+
+# Python versions to test:
+python:
+  - "3.5"
+
+# command to install dependencies:
+script: python3 -m pytest
+
+# Email notifications:
+notifications:
+  email: false
+
+# What branches:
+branches:
+  only:
+    - master

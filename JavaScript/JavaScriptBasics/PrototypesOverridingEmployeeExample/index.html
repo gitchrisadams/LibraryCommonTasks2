@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+    <script src="js/external/jquery-3.2.0.min.js"></script>
+    <script src="js/external/underscore-min.js"></script>
+    <script src="js/external/backbone-min.js"></script>
+    <script src="js/EmployeeScript.js"></script>
+
+    <script type="text/javascript">
+        /** Call method to get the employee details. */
+        getEmployeeDetails();
+
+        /** Gets the employee details. */
+        function getEmployeeDetails(){
+
+            /** Employee prototype to get the name in Upper case. 
+            this method overrides the default prototype defined outside
+            of the getEmployeeDetails method. */
+            Employee.prototype.getName = function(){
+                return this.name.toUpperCase();
+            }
+
+            /** Create employee Objects: */
+            var e1 = new Employee("Mark");
+            var e2 = new Employee("Bob");
+
+            /** Output Employee names to browser. */
+            document.write("E1 Name = " + e1.getName() + "<br>");
+            document.write("E2 Name = " + e2.getName() + "<br>");
+        }
+    </script>
+    
+    
+</body>
+</html>

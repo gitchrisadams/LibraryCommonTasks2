@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        
+        <!-- Stylesheet -->
+        <style>
+        	h1{
+        		color: red;
+        	}
+        </style>
+
+        <title>Dog Years Calculator</title>
+
+        <!-- Script to calculate Dog years -->
+        <script>
+	        window.onload=function(){
+				// Button Click action:
+				document.getElementById('btnCalc').addEventListener('click', calcAge);
+
+				// Action to perform when button clicked:
+				function calcAge(e){
+					// Get the value typed in form:
+					var age = document.getElementById('dogAge').value;
+
+					// Calculate the dog years:
+					age *= 7;
+
+					// Store the result:
+					var result = "In dog years, your dog is: " + age;
+
+					// Display the result in the result div:
+					document.getElementById('result').innerHTML = result;
+				}
+			}
+        </script>
+
+
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <h1>Dog Years Calculator</h1>
+
+        <label for="dogAge">Dog age in human years:</label>
+
+        <input id="dogAge" type="number" />
+        <button id="btnCalc">Calculate!</button>
+
+        <div id="result"></div>
+
+        
+    </body>
+</html>

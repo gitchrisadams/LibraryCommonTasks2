@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "690668886255",
+    "firebase_url": "https://workoutfirebase-a7d8f.firebaseio.com",
+    "project_id": "workoutfirebase-a7d8f",
+    "storage_bucket": "workoutfirebase-a7d8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690668886255:android:0002f5bcaa7db2da",
+        "android_client_info": {
+          "package_name": "christopheradams.com.workout6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690668886255-p9iolgp9tuc0dumds4ma8uo5kfjq2ij6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhN4zMZiFIpQO5iAN6IgIMz985ijRQDeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690668886255-p9iolgp9tuc0dumds4ma8uo5kfjq2ij6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

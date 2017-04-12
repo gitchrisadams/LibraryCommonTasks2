@@ -1,0 +1,9 @@
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\Grades.Test.dll
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\Grades.Test.pdb
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\Web-Dev\ClassesObjects\Grades.Test\obj\Debug\Grades.Test.csprojResolveAssemblyReference.cache
+E:\Web-Dev\ClassesObjects\Grades.Test\obj\Debug\Grades.Test.dll
+E:\Web-Dev\ClassesObjects\Grades.Test\obj\Debug\Grades.Test.pdb
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\ClassesObjects.exe
+E:\Web-Dev\ClassesObjects\Grades.Test\bin\Debug\ClassesObjects.pdb

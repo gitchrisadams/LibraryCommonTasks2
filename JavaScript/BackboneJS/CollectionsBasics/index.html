@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+    <script src="./js/external/jquery-3.2.0.min.js"></script>
+    <script src="./js/external/underscore-min.js"></script>
+    <script src="./js/external/backbone-min.js"></script>
+    
+    <div id="todo">
+        <h2>Todos</h2>
+            <div id="task"></div>
+    </div>
+
+    <script>
+    // ********* Create an array of objects: ********
+    var default_tasks = [
+    {title: 'Cook Dinner', done: false},
+    {title: 'Go Swimming', done: true},
+    {title: 'Call Grammy', done: false},
+    {title: 'Write a book', done: false}
+    ];
+
+    // *************** BackboneJS model: *****************
+    var Task = Backbone.Model.extend({
+        // The default values:
+        defaults: {
+            title: 'Lorem Ipsum',
+            done: false
+        }
+    });
+
+    // ****************** BackboneJS View: ****************
+    var TaskView = Backbone.View.extend({
+        // Constructor:
+        initialize: function(){
+            // Render the view:
+            this.render();
+        },
+
+        // Target the li tag:
+        tagName: 'li',
+
+        // Specify the model:
+        model: Task,
+
+        // Create a Underscore Template:
+        template: _.template('<%= title %>'),
+
+        // Render the view:
+        render: function(){
+            this.$el.html(this.template(this.model.attributes));
+        }
+    });
+
+    // ***************** BackboneJS Collection: ********************
+    var TaskCollection = Backbone.Collection.extend({
+        // Set the model to the Task:
+        model: Task
+    });
+
+    // ******************** Create TaskCollection View: ************************
+    var TaskCollectionView = Backbone.View.extend({
+        // Constructor:
+        initialize: function(){
+            // Render the view:
+            this.render();
+        }, 
+
+        // Target a <ul> tag:
+        tagName: 'ul',
+
+        // Pass in the collection:
+        collection: TaskCollection,
+
+        // This renders one single task view:
+        singleTaskView: function(task){
+            // Create new task view passing in the model:
+            var taskView = new TaskView({model: task})
+
+            // Append the taskView item:
+            this.$el.append(taskView.el);
+        },
+
+        // Render the View:
+        render: function(){
+            // Loop through the collection:
+            // Must pass in , this so Backbone knows the context we are using.
+            this.collection.forEach(this.singleTaskView, this)
+        }
+    });
+
+    // **************** Creating objects and populating views ****************
+    // Create instance of a collection:
+    var task_collection = new TaskCollection();
+
+    // Populate the collection passing in our array of tasks:
+    task_collection.reset(default_tasks);
+
+    // Create a CollectionView instance passing in our task_collection item:
+    var task_collection_view = new TaskCollectionView({collection: task_collection});
+
+    // Use JQuery to display the list of items to browers:
+    $("#task").append(task_collection_view.el);
+
+    </script>
+</body>
+</html>

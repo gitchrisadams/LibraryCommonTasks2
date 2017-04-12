@@ -1,0 +1,6 @@
+E:\Web-Dev\ClassesObjects\ClassesObjects\bin\Debug\ClassesObjects.exe.config
+E:\Web-Dev\ClassesObjects\ClassesObjects\bin\Debug\ClassesObjects.exe
+E:\Web-Dev\ClassesObjects\ClassesObjects\bin\Debug\ClassesObjects.pdb
+E:\Web-Dev\ClassesObjects\ClassesObjects\obj\Debug\ClassesObjects.csprojResolveAssemblyReference.cache
+E:\Web-Dev\ClassesObjects\ClassesObjects\obj\Debug\ClassesObjects.exe
+E:\Web-Dev\ClassesObjects\ClassesObjects\obj\Debug\ClassesObjects.pdb

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+</head>
+<body>
+    <script src="./js/external/jquery-3.2.0.min.js"></script>
+    <script src="./js/external/underscore-min.js"></script>
+    <script src="./js/external/backbone-min.js"></script>
+    
+    <div id="todo">
+        <h2>Todos</h2>
+            <div id="task"></div>
+            <div id="task2"></div>
+            <div id="task3"></div>
+    </div>
+
+    <script>
+    
+    /********* Backbone Model *******/
+    Book = Backbone.Model.extend({
+        // Constructor:
+        initialize: function(){
+        }, 
+
+        // Default values:
+        defaults:{
+            name: 'Book Title',
+            author: 'No one'
+        }
+    });
+
+    // Create new Book object w/ default values:
+    var myBook = new Book();
+
+    var myBookToChange = new Book({
+        name: 'This will change',
+        author: 'Will Changer'
+    });
+
+    // Create new Book object passing in new values:
+    var myBook2 = new Book({
+        name: 'My fancy book',
+        author: 'Christopher Adams'
+    });
+
+    // Change one of the Books name and author:
+    myBookToChange.set('name', 'New Book Name');
+    myBookToChange.set('author', 'William Changester')
+
+    // Add a year attribute to a book and set to 2017:
+    myBookToChange.set('year', 2017);
+
+    // Clone/Copy a book to a new Book:
+    var clonedBook = myBookToChange.clone();
+
+    // Console.log the cloned book name:
+    console.log("The cloned book is " + clonedBook.get('name'));
+
+    // Set year and console log it:
+    myBook2.set('year', 2015);
+    console.log('Book2 before delete attribute: ' + myBook2.get('year'));
+
+    // Also can check if myBook2 has the attribute year:
+    console.log('Does myBook2 have year attribute?: ' + myBook2.has('year'));
+
+    // Delete year and console log it:
+    myBook2.unset('year');
+    console.log('Book2 after delete attribute: ' + myBook2.get('year'));
+
+    // Also can check if myBook2 has the attribute year:
+    console.log('Does myBook2 have year attribute?: ' + myBook2.has('year'));
+
+    /****** Output to Browser *******/
+    // JQuery to output:
+    $("#task").append(myBook.get('name') + ' | by: ' + myBook.get('author'));
+    $("#task2").append(myBook2.get('name') + ' | by: ' + myBook2.get('author'));
+    $("#task3").append(myBookToChange.get('name') + 
+        ' | by: ' + myBookToChange.get('author') + 
+        ' | year: ' + myBookToChange.get('year'));
+
+    // Clear all attributes from myBookToChange and
+    // confirm all attributes were cleared.
+    myBookToChange.clear();
+    console.log('Does myBookToChange have year attribute?: ' + myBookToChange.has('year'));
+    console.log('Does myBookToChange have name attribute?: ' + myBookToChange.has('name'));
+
+    </script>
+</body>
+</html>
