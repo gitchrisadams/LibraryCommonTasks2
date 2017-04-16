@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Required libs for BackboneJS -->
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/underscore.js"></script>
+	<script type="text/javascript" src="libs/backbone.js"></script>
+
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<h1>Backbone Testing</h1>
+
+	<div id="test"><p>My Test1</p></div>
+
+	<!-- Links for testing routes -->
+	<!-- When you click a link it will console log the route -->
+	<a href="file:///home/cadams/Desktop/Web-dev/BackboneJSPluralSight/index.html#/teachers/12345">
+		Get Teacher 12345</a>
+	<br>
+
+	<a href="file:///home/cadams/Desktop/Web-dev/BackboneJSPluralSight/index.html#/student/54321">
+		Get Student 12345</a>
+	<br>
+
+	<a href="file:///home/cadams/Desktop/Web-dev/BackboneJSPluralSight/index.html#/NotDefined/789">
+		Get Not Defined 12345</a>
+	<br>
+
+	<script type="text/javascript">
+	// Define a Router:
+	var ApplicationRouter = Backbone.Router.extend({
+		// Create routes:
+		// Any route besides student or teacher goes to default route.
+		routes: {
+			"student/:id": "getStudent",
+			"teachers/:id": "getTeacher",
+			"*actions": "default"
+		}
+	});
+
+	// Instantiate the Router:
+	var router = new ApplicationRouter();
+
+	// The Routes to take when triggered:
+	// So when .../index.html#/student/123anyid is navigated to, it will console log this.
+	router.on('route:getStudent', function(id){
+		console.log("getting student " + id);
+	});
+
+	router.on('route:getTeacher', function(id){
+		console.log("getting teacher " + id);
+	});
+
+	router.on('route:default', function(){
+		console.log("default ");
+	});
+
+	// Start the Backbone History for routing:
+	Backbone.history.start();
+	</script>
+
+
+</body>
+
+<script type="text/javascript" src="js/BackboneTesting.js"></script>
+</html>

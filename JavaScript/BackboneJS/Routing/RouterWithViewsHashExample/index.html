@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Required libs for BackboneJS -->
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/underscore.js"></script>
+	<script type="text/javascript" src="libs/backbone.js"></script>
+
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<h1>Backbone Testing</h1>
+
+	<!-- Links to the views -->
+	<script type="text/template" id="first_template">
+		<label>My 1st View</label>
+		<a href="#second">Go to 2nd View</a>
+	</script>
+
+	<script type="text/template" id="second_template">
+		<label>My 2nd View</label>
+		<a href="#first">Go to 1st View</a>
+	</script>
+
+	<div id="container"></div>
+
+
+	<script type="text/javascript">
+	// Define view:
+	FirstView = Backbone.View.extend({
+		el: $("#container"),
+
+		// Constructor:
+		initialize: function(){
+			this.render();
+		}, 
+
+		// Render the template using UnderscoreJS targeting first_temlate
+		// tag w/ JQuery and render to the html page.
+		render: function(){
+			var template = _.template($("#first_template").html(), {});
+			this.$el.html(template);
+		}
+	});
+
+	// Define view:
+	SecondView = Backbone.View.extend({
+		el: $("#container"),
+
+		// Constructor:
+		initialize: function(){
+			this.render();
+		}, 
+
+		// Render the template using UnderscoreJS targeting second_template
+		// tag w/ JQuery and render to the html page.
+		render: function(){
+			var template = _.template($("#second_template").html(), {});
+			this.$el.html(template);
+		}
+	});
+
+	// Define a Router:
+	MyRouter = Backbone.Router.extend({
+		// Define Routes:
+		routes: {
+		"": "firstPage",
+		"first": "firstPage",
+		"second": "secondPage"
+		}, 
+
+		// Define action to take when route is followed:
+		firstPage: function(){
+			// Create a new View from template:
+			new FirstView();
+			console.log("Routing to first View.")
+		}, 
+		secondPage: function(){
+			// Create a new View from template:
+			new SecondView();
+			console.log("Routing to second View.")
+		}
+	});
+
+	// Create instance of the Router:
+	var router = new MyRouter();
+
+	// Start the Backbone History tracking:
+	Backbone.history.start();
+
+	</script>
+
+</body>
+
+<script type="text/javascript" src="js/BackboneTesting.js"></script>
+</html>
