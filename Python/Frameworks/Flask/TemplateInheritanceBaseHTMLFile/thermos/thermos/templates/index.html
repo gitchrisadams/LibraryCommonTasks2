@@ -1,0 +1,32 @@
+<!-- Put the html from base.html here a.k.a extend the base 
+     So we inherit everything from base except parts that
+     are marked by the block and endblock -->
+{% extends "base.html" %}
+
+<!-- Add title unique to this page -->
+{% block title %}
+Thermos -- Welcome
+{% endblock %}
+
+<!-- Main content unique to this page -->
+{% block content %}
+    <article>
+        <header>
+            <h1>Welcome</h1>
+            <p>Theremos is a simple social bookmarking site.</p>
+        </header>
+
+        <section>
+            <h2>article section 2</h2>
+            <p>
+                Text Text Text Text Text Text
+            </p>
+        </section>
+
+        <section>
+            <h2>Article section 2</h2>
+            <p>Text Text Text Text Text</p>
+        </section>
+    </article>
+{% endblock %}
+

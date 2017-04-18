@@ -1,0 +1,26 @@
+<!-- Extend/inherit from the base.html template -->
+<!-- So it inherits all the styles/css and nav bar from base class -->
+{% extends "base.html" %}
+
+<!-- Add a title unique to this page -->
+{% block title %}
+Thermos -- Add a URL
+{% endblock %}
+
+<!-- Main Content unique to this page -->
+{% block content %}
+	<form action="" method="post">
+		<p>
+			Please enter your bookmark here:
+			<input type="text" name="url">
+		</p>
+
+		<p>
+			<button type="submit">Submit</button>
+		</p>
+{% endblock %}
+
+<!-- We do not want to see the right sidebar on the page
+	 so we add in an empty sidebar -->
+{% block sidebar %}
+{% endblock %}
