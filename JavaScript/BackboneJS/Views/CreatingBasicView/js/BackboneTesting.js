@@ -23,7 +23,7 @@ $('body').prepend(v.el);
 // Create a new View:
 var V2 = Backbone.View.extend({});
 
-// Create a new V2 object passing into the conctructor
+// Create a new V2 object passing into the constructor.
 // the id we have in the html page, as the el (element).
 var v2 = new V2({el: '#test'});
 

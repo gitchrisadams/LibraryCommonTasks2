@@ -7,7 +7,7 @@ var V = Backbone.View.extend({
 		var data = {
 			lat: -27, 
 			lon: 153
-		};
+	};
 		
 		// Use JQuery to select the script tag that has the template tags
 		// in the html file. Get the html content of the script tag.

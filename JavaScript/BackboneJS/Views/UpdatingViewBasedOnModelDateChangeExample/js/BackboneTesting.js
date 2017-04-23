@@ -11,7 +11,7 @@ var RefreshingView = Backbone.View.extend({
 		// the }, this); is the view method that is passed to the on()
 		// method, this handles setting the context for the event handler.
 		this.model.on('change', function(){
-			// Render the view:
+			// Render the view whenever view changes:
 			this.render();
 		}, this);
 	},
@@ -21,6 +21,7 @@ var RefreshingView = Backbone.View.extend({
 		// Access the JQuery wrapper around the views element.
 		// Use the Jquery's html() to replace it with the models
 		// text property.
+		// So this gets the date and puts it onto the page.
 		this.$el.html(this.model.get('text'));
 	}
 });
@@ -42,6 +43,7 @@ v.render();
 // Setup a timer to show that when the model changes,
 // the view gets updated.
 // The , 1000); means it timer triggers every 1 second.
+// The setInterval method is called, passing in the date and delay.
 setInterval(function(){
 	// Change the text attribute of the model to the new date.
 	m.set({text: new Date().toString()});

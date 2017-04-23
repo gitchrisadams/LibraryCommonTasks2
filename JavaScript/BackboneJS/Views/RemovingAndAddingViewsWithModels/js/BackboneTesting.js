@@ -26,4 +26,5 @@ var v = new HeadingView({model: h});
 $('body').append(v.render().el);
 
 // Remove the view:
-v.remove();
+// Uncomment to see view removed.
+//v.remove();

@@ -3,10 +3,12 @@ var V = Backbone.View.extend({
 	// Define render Function:
 	render: function(){
 		// Declare data that will be used to render template:
-		// Latitude and longitude.
+		// Latitude, longitude, and elevation.
 		var data = {
 			lat: -27, 
-			lon: 153
+			lon: 153,
+			elevation: 20000,
+			windSpeed: 65
 		};
 
 		// Use JQuery to select the script tag that has the template tags
