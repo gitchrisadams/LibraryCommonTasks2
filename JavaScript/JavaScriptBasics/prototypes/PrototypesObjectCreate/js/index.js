@@ -47,4 +47,15 @@ console.log("The dog has " + dog.legs + " legs.");
 console.log("Dog barks set to: " + dog.barks);
 
 
+/** Another Object.create() Example **/
+// Create an object:
+var project = {
+	securityLevel: 2
+};
 
+// Use Object.create to create a new secretProject passing in the project object:
+// When we pass in project we set secretProjects prototype to the project object.
+var secretProject = Object.create(project);
+
+// Log out the secretProject security level:
+console.log(secretProject.securityLevel);
