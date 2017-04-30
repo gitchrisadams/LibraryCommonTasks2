@@ -44,8 +44,7 @@ var myJsonObject = {
 	}
 };
 
-// Console log the object:
-console.log("The ")
+
 
 
 
