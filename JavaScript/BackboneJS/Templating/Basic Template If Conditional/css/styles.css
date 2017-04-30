@@ -1,0 +1,10 @@
+
+body {
+	padding: 40px;
+}
+
+body, p { font-size: 24px; }
+
+.someClass{
+	color: red;
+}

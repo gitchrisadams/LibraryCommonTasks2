@@ -1,0 +1,5 @@
+/* Add mouse pointer when nav links are hovered and clicked */
+#nav ul li{
+	cursor: pointer;
+	color: blue;
+}
