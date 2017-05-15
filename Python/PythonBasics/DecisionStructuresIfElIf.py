@@ -45,3 +45,9 @@ if not(age < 18):
 else:
     print("Please come back in {0} years.".format(18 - age))
 
+
+# Conditional Expression:
+a, b = 1, 1
+v = '\nthis is true' if a < b else '\nthis is not true'
+print(v)
+

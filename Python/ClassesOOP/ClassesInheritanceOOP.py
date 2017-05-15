@@ -16,6 +16,7 @@ class Shape:
 
 # Create a Rectangle class:
 # The class accepts a Shape object.
+# Rectangle inherits from Shape.
 class Rectangle(Shape):
     # Conctructor:
     def __init__(self, xcor, ycor, width, height):

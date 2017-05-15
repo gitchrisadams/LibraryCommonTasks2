@@ -1,19 +1,17 @@
-""" Christopher Adams
-    4/18/17 
-	Code description here.
-"""
-# Import NetCDF4 library and Dataset module:
-import netCDF4
-from netCDF4 import Dataset
+# Christopher Adams
+# date here.
+# Code description here.
+
+# Imports
 import sys
 
-# Function def here:
-def findStandardTimeVars(url):
-	print("Hello world")
 
-# Main program
+def your_function_here(url):
+	print("Hello world", url)
+
+
 def main():
-	# Code here
+	your_function_here("http://www.google.com")
 
 if __name__ == '__main__':
 	sys.exit(main())

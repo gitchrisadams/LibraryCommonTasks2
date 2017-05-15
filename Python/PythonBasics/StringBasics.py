@@ -75,6 +75,14 @@ print("Pi is approximately {0:1.50f}".format(22/7))
 # Notice we have four months and 3 replacements, we use month 2 twice.
 print("January: {2}, February: {0}, March: {2}, June: {1}".format(28, 30, 31))
 
+# If you don't use a number like {2} and leave blank, 
+# the .format values are put in order they occur:
+print("\nThe number is {} and the other number is {}.".format(50, 60))
+
+# Named formats can also be used:
+print("\nThe location is {latitude} and {longitude}".format(latitude="60N",
+                                                            longitude="5E"))
+
 # Example of a raw String:
 # String displayed w/ the esc chars:
 a_string = "This is\na string split\t\tand tabbed"

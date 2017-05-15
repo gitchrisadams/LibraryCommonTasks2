@@ -78,6 +78,27 @@ beatles.clear()
 print("Beatles now cleared: " + str(beatles) + "\n")
 
 
+# Copying Dictionaries using copy()
+dictToCopy = dict(red=12345, blue=23456, white=7777, orange=99999)
+
+newDictFromDictToCopy = dictToCopy.copy()
+print("The newly copied dict is: ")
+print(newDictFromDictToCopy)
+
+# Copying dictionaries using the dict contructor:
+newDictUsingContructor = dict(dictToCopy)
+print("\nThe newly copied dict using dict contructor")
+print(newDictUsingContructor)
+
+
+# Update a dictionary w/ contents of another dictionary:
+newDictToMergeIn = dict(yellow=7654, blue=9876)
+
+dictToCopy.update(newDictToMergeIn)
+print("\nThe dictToCopy dictionary w/ new dict merged in:")
+print(dictToCopy)
+
+
 
 
 
