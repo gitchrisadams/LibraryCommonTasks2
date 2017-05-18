@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jquery": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": 0
+    },
+        "globals": {
+        "jQuery": true,
+        "$": true
+    }
+}
