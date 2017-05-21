@@ -1,21 +1,31 @@
 # Create a list of numbers:
-numbers = [1,2,3,4,5]
+numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 
 # Other way to create a list:
 # list2 = list()
 
 # Display the list of numbers:
+print("The numbers:")
 print(numbers)
-print()
+print("")
 
 # Add the numbers in the list and display:
+print("Adding nums in a list example:")
 print(numbers[0] + numbers[1])
-print()
+print("")
 
 # Loop through the list:
+print("Loop through numbers List example:")
 for i in numbers:
     print(i)
-print()
+print("")
+
+# Loop through a list using slices:
+# [start:end-1:step]
+print("Numbers in Slice example:")
+for numInSlice in numbers[10:16:2]:
+	print(numInSlice)
+print("")
 
 # Create a List of Beatles members:
 beatles = ['John', 'Paul', 'George', 'Ringo']
@@ -145,10 +155,17 @@ print(myPlainOldList)
 print("\nList comprehension:")
 print([len(word) for word in myPlainOldList])
 
+# Chaning elements in list at slice:
+myPlainOldList[4:13:2] = ('x', 'x', 'x', 'x', 'x')
 
+print("\nmyPlainOldList every other word replace w/ x word 5 to 13")
+print(myPlainOldList) 
 
-
-
+# Extending a List:
+listToExtend = [1, 2, 3, 4, 5]
+listToExtend.extend(range(10))
+print("\nThe list is now extended from 5 to:")
+print(len(listToExtend))
 
 
 

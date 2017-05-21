@@ -28,12 +28,12 @@ class Album:
     """ Class to represent an Album, using it's track list.
     
     Attributes:
-        name(str): The name of the album.
-        year(int): The year the album was released.
+        name (str): The name of the album.
+        year (int): The year the album was released.
         artist:(Artist): The artist responsible for the album.
             If not specified, the artist will default to an artist 
             with the name "Various Artists".
-        track(List[Song]): A list of songs on the album.
+        track (List[Song]): A list of songs on the album.
     
     Methods:
         add_song: Used to add a new song to the album's track list.
@@ -51,10 +51,13 @@ class Album:
 
     def add_song(self, song, position=None):
         """ Adds a song to the track list
+
+        If a more detailed explaination of this function was needed,
+        if would go here like this.
         
         Args:
-            song(Song):A song to add.
-            position(Optional[int]): If specified, song will be added to that position
+            song (Song):A song to add.
+            position (Optional[int]): If specified, song will be added to that position
                 in the track list = inserting it between other songs if necessary.
                 Otherwise, the song will be added to the end of the list.
         """
@@ -68,8 +71,8 @@ class Artist:
     """Basic class to store artist details.
     
     Attributes:
-        name(str):The name of the artist.
-        albums(List[Album]): A list of the albums by this artist.
+        name (str):The name of the artist.
+        albums (List[Album]): A list of the albums by this artist.
             The list includes only those albums in this collection, it is
             not an exhaustive list of the artist's published albums.
     
@@ -86,7 +89,7 @@ class Artist:
         """Add a new album to the list.
         
         Args:
-            album(Album):Album object to add to the list.
+            album (Album):Album object to add to the list.
                 If the album is already present, it wil not be added again
                 (although this is yet to be implemented).
         """

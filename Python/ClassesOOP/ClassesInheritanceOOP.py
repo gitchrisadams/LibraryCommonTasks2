@@ -18,7 +18,7 @@ class Shape:
 # The class accepts a Shape object.
 # Rectangle inherits from Shape.
 class Rectangle(Shape):
-    # Conctructor:
+    # Constructor:
     def __init__(self, xcor, ycor, width, height):
         # Use the base class Constructor to set the x/y coordinates:
         Shape.__init__(self, xcor, ycor)

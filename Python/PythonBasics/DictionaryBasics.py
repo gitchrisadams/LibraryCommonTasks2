@@ -99,7 +99,29 @@ print("\nThe dictToCopy dictionary w/ new dict merged in:")
 print(dictToCopy)
 
 
+# Another way to add one dict to another:
+print("")
+dict1 = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}
+dict2 = {'six': 6, 'seven': 7, 'eight': 8}
+dict3 = {**dict1, **dict2, 'nine': 9}
 
+print('dict3:')
+print(dict3)
+
+# Print the keys in dict:
+print("\nKeys:")
+for k in dict3: print(k)
+
+# Print keys and values:
+print('\nKeys and values:')
+for k, v in dict3.items(): print(k, v)
+
+# Finding a value otherwise just printing 'not found'
+print("\nIs three in there?")
+print(dict3.get('three', 'not_found'))
+
+print("\nIs there a one_hundred in there?")
+print(dict3.get('one_hundred', 'not_found'))
 
 
 

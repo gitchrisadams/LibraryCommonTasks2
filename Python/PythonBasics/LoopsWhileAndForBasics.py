@@ -65,6 +65,11 @@ for meal in meals:
 if nasty_food_item:
     print("Why must I have a nasty food item!")
 
+# Enumeration example, loop w/ index and value:
+s = "this is a string"
+for i, c in enumerate(s):
+    print(i, c)
+
 # Iterator Example:
 myString = "12345676890"
 

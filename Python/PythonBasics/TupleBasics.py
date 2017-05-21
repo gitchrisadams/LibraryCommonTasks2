@@ -4,6 +4,7 @@
 # unlike lists that hold the same data type and lists are mutable.
 
 # Creating a tuple: Can use w/ parens or not.
+# The comman is what distiquishes it as a tuple.
 myTuple = "a", "b", "c"
 myTuple2 = ("d", "e", "f")
 
@@ -86,9 +87,31 @@ print(track4)
 for song in tracks:
     print("\t", song)
 
+# Tuple Operations:
 
+# Create a tuple w/ length of 24
+tupleTo24 = tuple(range(25))
+print("\nThe Tuple:")
+print(tupleTo24)
 
+# Is a number in the tuple:
+print("\nIs 50 in the tuple?")
+print(50 in tupleTo24)
+print("\nIs 24 in the tuple?")
+print(24 in tupleTo24)
 
+# Access tuple by index:
+print("\nThe tuple at index tupleTo24[10] is:")
+print(tupleTo24[10])
+
+# Min/Max:
+print("Min/Max:")
+print(min(tupleTo24))
+print(max(tupleTo24))
+
+# Count instances of a number in tuple:
+print("\nInstances of the number 5 in tuple:")
+print(tupleTo24.count(5))
 
 
 
