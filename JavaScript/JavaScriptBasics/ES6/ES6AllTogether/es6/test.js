@@ -44,7 +44,7 @@ console.log(message);
 // Every Symbol is unique so comparison will be false.
 const RED = Symbol("The color of a sunset!");
 const ORANGE = Symbol("The color of a sunset!");
-console.log("\nIs RED === ORANGE")
+console.log("\nIs RED === ORANGE");
 console.log(RED === ORANGE);
 
 
