@@ -69,6 +69,7 @@ const o = {
 
 console.log(getSentence(o)); // "I love JavaScript"
 
+
 /***** ES6 Feature Default Arguments *****/
 console.log("");
 console.log("***************** Default Arguments Example *****************");
