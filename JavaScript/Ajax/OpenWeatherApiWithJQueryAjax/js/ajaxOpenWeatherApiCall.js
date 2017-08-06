@@ -12,14 +12,9 @@ var openWeatherApiCall = (function() {
      * @param {string} The api key to use for openweathermap.org
      */
     function makeRequest(apiKey) {
-      fetch(url + '&appid=' + apiKey).then(function(response) {
-        if (!response.ok) {
-          throw Error(response.status);
-        }
-        return response.json();
-      }).then(function(response) {
+      $.get(url + '&appid=' + apiKey).done(function(response) {
         updateWeatherApiUI.uiUpdateSuccess(response);
-      }).catch(function(error) {
+      }).fail(function(error) {
         updateWeatherApiUI.updateUIError(error);
       });
     }

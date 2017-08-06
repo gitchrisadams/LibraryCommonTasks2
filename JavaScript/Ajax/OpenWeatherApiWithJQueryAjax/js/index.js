@@ -1,0 +1,1 @@
+openWeatherApiCall.makeRequest(apiKey);
