@@ -22,13 +22,18 @@ var openWeatherApiCall = (function() {
     // Handle XHR response.
     function responseMethod() {
       if (httpRequest.readyState === 4) {
-        console.log(httpRequest.responseText);
+        if (httpRequest.status === 200) {
+          updateWeatherApiUI.uiUpdateSuccess(httpRequest.responseText);
+        } else {
+          updateWeatherApiUI.uiUpdateFail();
+        }
         return httpRequest.responseText;
       }
     };
 
     // Return only makeRequest, reponseMethod is a private method.
     return {
-      makeRequest: makeRequest
+      makeRequest: makeRequest,
+      
     }
 })();
