@@ -20,9 +20,9 @@ export default class kicked_out extends Component {
   render() {
     return (
         <BasicImage
-          source={require('./assets/images/wallpaper2.png')}
+          source={require('./assets/images/wallpaper3.png')}
         >
-          <Text style={{ fontFamily: 'fontawesome', fontSize: 40 }}>&#xf2bc;</Text>
+          
         </BasicImage>
         
     );
