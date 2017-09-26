@@ -45,3 +45,8 @@ Now your changes are pushed to your forked copy of the respo.
 ## Make a pull request.
 https://help.github.com/articles/about-pull-requests/
 
+## Create a Pull request
+Go to your github account and look for message that asks you if you would like to create a new pull request.
+
+Be sure your newly created ban is selected.
+
