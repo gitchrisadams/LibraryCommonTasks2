@@ -35,6 +35,7 @@ git add .
 Example:
 ```
 git commit -m "My fancy new changes"
+```
 
 ## Push your changes to your forked copy of the repo
 ```
