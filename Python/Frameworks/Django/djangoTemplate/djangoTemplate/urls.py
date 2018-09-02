@@ -1,10 +1,11 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'djangoTemplate.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+# Import the view:
+from .views import welcome
 
-    url(r'^admin/', include(admin.site.urls)),
+# url(r'^$', welcome) matches empty string so localhost:8000 goes to welcome page.
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', welcome)
 ]
