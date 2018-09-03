@@ -7,4 +7,8 @@ def home(request):
     return render(request, 'home.html')
 
 def about(request):
-    return render(request, 'about.html')
+    # The "50 games" string will be inserted into {{ngames}} var in about.html template.
+    return render(
+        request, 'about.html',
+        {'ngames': "50 games"}
+    )
