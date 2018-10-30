@@ -29,26 +29,17 @@ function chunk(array, size) {
   // Store the last element in the current array.
   // If the last element is empty or last element is equal to size
   // then push the element to the new array.
-  // Otherwise push the element to the old array named last.
-           // 8       [*8*, 9, 3, 4]
-           // 9       [8, *9*, 3, 4]
+  // Otherwise push the element to the 
   for (let element of array) {
-
-            //empty        0 -1 = -1 which is empty
-            //chunk.lengh = 1        0 -1 = -1 which is empty                     
     last = chunked[chunked.length - 1];
-
-
-       // Not last because empty array   ---> 8
+    console.log('last');
+    console.log(last);
     if (!last || last.length === size) {
       chunked.push([element]);
     } else {
-      // last value is now: [8]  ---> 8
       last.push(element);
     }
   }
 
   return chunked;
 }
-
-chunk([8, 9, 3, 4], 2);
