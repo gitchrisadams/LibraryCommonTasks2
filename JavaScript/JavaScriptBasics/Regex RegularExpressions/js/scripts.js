@@ -101,3 +101,12 @@ var patternDotString = /.m/g;
 var resultDotSring = blogTextDotString.match(patternDotString);
 console.log("\nMatch blogDotString using dot notation to match any letter: ");
 console.log(resultDotSring);
+
+// Turning a string w/ spaces into a string without spaces:
+var myStringWithSpaces = "Hello from mars with a ton of spaces";
+var myCleanedString = myStringWithSpaces.replace(/[^\w]/g, '');
+console.log(myCleanedString);
+
+
+
+

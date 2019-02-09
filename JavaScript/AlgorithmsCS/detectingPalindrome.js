@@ -1,22 +1,10 @@
-module.exports = reverse;
-
-// Option 1:
-/*
-function reverse(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('');
+function isPalindrome(pal) {
+  console.log(pal);
+  return pal.split('').reverse().join('') === pal;
 }
-*/
 
-// Option 2:
-function reverse(str) {
-  let reversed = '';
-
-  for (let character of str) {
-    reversed = character + reversed;
-  }
-
-  return reversed;
-}
+console.log("Is Chris a pal?");
+console.log(isPalindrome("chris"));
+console.log("********************");
+console.log("Is racecar a pal?");
+console.log(isPalindrome("racecar"));
