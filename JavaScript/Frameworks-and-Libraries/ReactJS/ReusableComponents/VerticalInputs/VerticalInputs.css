@@ -1,0 +1,26 @@
+/* :local so this is not a global css stylesheet */
+:local(.container) {
+}
+
+:local(.content) {
+}
+
+:local(.postDateAndTitleContainer) {
+    
+}
+
+:local(.textAndInputCont) {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+:local(.inputLabel) {
+    width: 100px;
+    text-align: left;
+}
+
+:local(#postDateInput) {
+    width: 150px;
+}
+
