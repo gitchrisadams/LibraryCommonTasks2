@@ -2,7 +2,6 @@
  * Use jest test.js from terminal to run tests
  * npm install -g jest globally or as a package
  */
-
 const InsertingAtFile = require('./insertingAtIndex');
 const InsertingAtIndex = InsertingAtFile.InsertingAtIndex;
 
