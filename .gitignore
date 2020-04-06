@@ -47,4 +47,9 @@ Temporary Items
 .apdisk
 JavaScript/Ajax/OpenWeatherAPICall/js/apikey.js
 
+/Typscript/testing/testing.js
+/Typscript/testing/testing.tsc
 
+.vscode
+
+node_modules/
