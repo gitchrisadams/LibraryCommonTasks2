@@ -31,4 +31,12 @@ module Objects {
   //rectangle.calcArea('2');
   console.log(rectangle.calcArea(2, 3));
 
+  // Creating Typescript Object and specifying types:
+  const person: {
+    name: string;
+    age: number;
+  } = {
+    name: "Chris",
+    age: 43
+  };
 }

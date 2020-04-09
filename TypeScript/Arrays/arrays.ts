@@ -17,4 +17,15 @@ module applyingTypes {
   // Undefined:
   var quantity: number;
   var company = undefined;
+
+  // Array type is inferred as string for hobbies.
+  const person = {
+    name: "Chris",
+    age: 43,
+    hobbies: ['Sports', 'Cooking']
+  };
+
+  // Create empty array and assign and specifically type as string Array.
+  let favoriteActivities: string[];
+favoriteActivities = ['sports'];
 }

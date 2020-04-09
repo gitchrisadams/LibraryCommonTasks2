@@ -1,0 +1,23 @@
+{
+  "name": "typescriptudemytutmax",
+  "version": "1.0.0",
+  "description": "https://marketplace.visualstudio.com/items?itemName=pucelle.run-on-save",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitchrisadams/TypeScriptUdemyTutMax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitchrisadams/TypeScriptUdemyTutMax/issues"
+  },
+  "homepage": "https://github.com/gitchrisadams/TypeScriptUdemyTutMax#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
